@@ -17,24 +17,24 @@ export default function Login() {
         <>
             <div className="LoginFunction" >
                 <form onSubmit={handleLogin}>
-                    <div style={{
-                        marginBottom: 15
-                    }}>
-                        <label for="id" style={{ marginRight: 10 }}><strong>Account:</strong></label>
+                    <div className='form-group'>
+                        <label for="id" className="form-label"><strong>Account:</strong></label>
                         <input type="text"
+                            className='form-input'
                             id="email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}></input>
                     </div>
-                    <div>
-                        <label for="password" style={{ marginRight: 2 }}><strong>Password:</strong></label>
+                    <div className='form-group'>
+                        <label for="password" className="form-label"><strong>Password:</strong></label>
                         <input type="password"
                             id="password"
                             value={password}
-                            onChange={(e) => setPassword(e.target.value)}></input>
+                            onChange={(e) => setPassword(e.target.value)}
+                            className='form-input'></input>
                     </div>
                     <div>
-                        <button style={{ marginRight: 30, marginTop: 15 }} disabled={!validateForm()}>Login</button>
+                        <button disabled={!validateForm()}>Login</button>
                     </div>
                 </form>
             </div >
